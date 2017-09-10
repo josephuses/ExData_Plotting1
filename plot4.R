@@ -30,7 +30,7 @@ with(hpc,
      {
        plot(datetime, Global_active_power, type = "l", xlab = NA, ylab="Global Active Power")
        plot(datetime, Voltage, type = "l")
-       plot(datetime, Sub_metering_1, type = "l")
+       plot(datetime, Sub_metering_1, type = "l", ylab = "Energy sub metering")
        lines(datetime, Sub_metering_2, col = "red")
        lines(datetime, Sub_metering_3, col = "blue")
        legend("topright", bty = "n", lty = 1, col = c("black", "red", "blue"), legend = c("Sub metering 1", "Sub metering 2", "Sub metering 3"))
