@@ -1,11 +1,12 @@
 # Set the location of the data set for download
 url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 
-# Download the data set
-download.file(url, destfile = "eda.zip", method = "curl")
-
-# Unzip the data set
-unzip("eda.zip")
+# Download and unzip the data set  if it is not
+# yet downloaded
+if(!file.exists("exdata.zip")){
+  download.file(url, destfile = "exdata.zip", method = "curl")
+  unzip("exdata.zip")
+}
 
 # Load the data.table package
 if(!require(data.table)){install.packages("data.table")}
